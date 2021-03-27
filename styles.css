@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color:red;
+    
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+div.title-box{
+    background-color: white;
+    position: absolute;
+    z-index: 999;
+    padding: 20px;
+    top: 180px;
+    box-shadow: -13px 13px 2px 1px rgba(0, 0, 0, .2);
+}
+header h1,header p,li {
+    font-family: 'kenia' ,cursive;
+}
+header h1 {
+    font-size: 80px;
+    text-align: center;
+
+}
+header p {
+    font-size:25px;
+    text-align: center;
+
+
+}
+.slider{
+    overflow: hidden;
+}
+div.slides {
+
+    display:flex;
+    flex-direction: row;
+    width: calc(500px*4 );
+    animation: glisse 15s infinite ease;
+}
+
+.slide{
+    opacity: 0.5;
+}
+
+/* sliders */
+@keyframes glisse{
+    0%{
+          transform : translateX(0);
+    }
+
+    10%{
+        transform: translateX(0);
+    }
+    33%{
+        transform : translateX(-500px);
+  }
+  66%{
+    transform : translateX(-500px);
+}
+100%{
+    transform : translateX(0);
+}
+}
+
+/*Navigation menu*/
+.section-menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-130px);
+}
+nav.menu{
+    width: calc(500px*4 );    
+   
+
+}
+nav.menu ul{
+    display: flex;
+    flex-direction: row;
+}
+nav.menu ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+nav.menu ul li:hover {
+      transform: scale(0.9);
+      transition: 0.3s all;
+}
+
+
+nav.menu ul li a {
+    color:white;
+    font-size: 50px;
+    font-family: 'kenia' ,cursive;
+    text-decoration: none;
+
+
+}
+.nav-item{
+   height: 300px;
+   flex:1;
+}
+
+.pizza{
+    background: url(../RESTO/images/pizza-banner.jpg) 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.salade{
+    background: url(../RESTO/images/salad-banner.jpg) 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+.burger{
+    background: url(../RESTO/images/burger-banner.jpg) 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.boissons{
+    background: url(../RESTO/images/boisson-banner.jpg) 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+/* sections */
+.item{
+    background-color: white;
+    margin: 20px;
+    display: flex;
+    cursor: pointer;
+    width:50%;
+
+}
+
+.item:hover{
+    transition: 0.3s all;
+    box-shadow: -8px 8px 2px 1px rgba(0, 0, 0, .1);
+}
+.item:hover{
+    transform: scale(1.1);
+    transition: 0.3s all;
+
+
+}
+.item-infos{
+    padding: 20px;
+    line-height: 40px;
+}
+section{
+    padding: 100px;
+    font-family: 'Martel',serif;
+}
+
+.item-infos h3{
+    font-size: 25px;
+}
+.item-infos hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+p.price{
+    font-weight: bold;
+    font-size:  22px;
+}
+section img{
+    width: 200px;
+    
+
+}
+/* menu a droite */
+
+.sticky{
+    position: fixed;
+    width: 500px;
+   top:30vh;
+   right: 50px;
+   transition: 0.2s all;
+   transition: translateY(10px);
+    
+}
+.sticky + #main{
+    padding-top: 200px;
+
+}
+.sticky nav.menu ul{
+    flex-direction: column;
+}
+.sticky, nav.menu ul li{
+    margin:2px;
+    box-shadow: 13px 10px 2px 1px rgba(0, 0, 0, .3);
+
+}
+
+/* pied de page */
+
+footer p {
+font-size: 22px;
+text-align: center;
+color: white;
+padding: 20px;
+font-family: 'Martel',serif;
+
+}
